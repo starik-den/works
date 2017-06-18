@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     autopref = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
+    imagemin = require ('gulp-imagemin'),
+    pngquant = require ('imagemin-pngquant'),
     // postscss = require('gulp-postcss'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
@@ -52,6 +54,18 @@ gulp.task('js:prod', function () {
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });
+gulp.task('image:prod', function () {
+    gulp.src(path.src.img) //Выберем наши картинки
+        .pipe(imagemin())
+        // .pipe(imagemin({ //Сожмем их
+        //     progressive: true,
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     use: [pngquant()],
+        //     interlaced: true
+        // }))
+        .pipe(gulp.dest(path.build.img)) //И бросим в build
+        .pipe(reload({stream: true}));
+});
 gulp.task('browserSync', function () {
     browserSync({
         server: {
@@ -80,9 +94,9 @@ gulp.task('watch', function () {
     watch([path.watch.js], function (event, cb) {
         gulp.start('js:prod');
     });
-    // watch([path.watch.img], function(event, cb) {
-    //     gulp.start('image:prod');
-    // });
+    watch([path.watch.img], function(event, cb) {
+        gulp.start('image:prod');
+    });
 
 });
 
