@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Title</title>
+    <title>Author</title>
 </head>
 <body>
 <header class="header">
@@ -133,13 +133,37 @@
             </div>
         </div>
     </div>
-    <div class="contact">
-        <div class="info"></div>
+    <div class="contact container">
+        <p class="contact__title">Contact Us</p>
+        <div class="info">
+            <p class="info__title">Get in touch with us</p>
+            <span class="info__txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</span>
+            <div class="info__social">
+                <div class="social__fb">
+                    <a href="#">&#xf231;</a>
+                </div>
+                <div class="social__tw">
+                    <a href="#">&#xf243;</a>
+                </div>
+                <div class="social__gplus">
+                    <a href="#">&#xf235;</a>
+                </div>
+            </div>
+            <span class="info__copyright">Posted by Dospel & GanjaParker</span>
+            <span class="info__copyright">+XX-XXXX - XXXX - XX</span>
+            <span class="info__copyright">info@mail.com</span>
+        </div>
         <form action="" class="form">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <button class="form__btn">Send</button>
+            <label>
+                <input class="form__name" type="text" maxlength="255" placeholder="Name">
+            </label>
+            <label>
+                <input class="form__email" type="email" maxlength="255" placeholder="Email">
+            </label>
+            <label>
+                <textarea class="form__massage" maxlength="600" placeholder="Massage"></textarea>
+            </label>
+            <button type="submit" class="form__btn">Send</button>
         </form>
     </div>
 </main>
