@@ -1,3 +1,220 @@
-.good {
-  font-size: 30px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
+@import "normalize.css";
+@import "slick-theme.css";
+@import "slick.css";
+
+$op-font: 'Open Sans', Arial, sans-serif;
+.container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  //font-size: 0;
 }
+/*styles for header*/
+.header {
+  width: 100%;
+  height: 100px;
+  background: #ffffff;
+}
+.header__logo, .wrapper-menu {
+  display: inline-block;
+}
+.header__logo {
+  float: left;
+  margin-left: 120px;
+  margin-top: 30px;
+}
+.wrapper-menu {
+  float: right;
+  height: 100%;
+}
+.header__menu {
+  font-size: 0;
+  list-style: none;
+  padding: 0;
+  height: 100%;
+  margin-right: 120px;
+  .menu__item {
+    display: inline-block;
+    box-sizing: border-box;
+    border-bottom: 3px solid transparent;
+    width: 85px;
+    height: 100%;
+  }
+  .item__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-family: $op-font;
+    color:  #484c55;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 87px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+.menu__item {
+  &:hover {
+    border-bottom-color: #49cbcd;
+    background-color: #f8f9fb;
+    & .item__link {
+      color:  #49cbcd;
+    }
+  }
+}
+/*styles for slider*/
+.slider {
+  width: 100%;
+  //height: auto;
+}
+.slider__content {
+  background: #a4dfd8 url("../img/slider-content.jpg") no-repeat;
+  background-size:cover;
+  text-align: center;
+}
+.content__title {
+  font-family: $op-font;
+  color: #ffffff;
+  font-size: 63px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+  margin:140px auto 40px;
+}
+.content__txt {
+  display: block;
+  font-family: $op-font;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 37px;
+  text-align: center;
+  max-width: 375px;
+  margin: 0 auto;
+}
+.content__more {
+  display: inline-block;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffffff;
+  background-color: rgba(73, 203, 205, 0);
+  width: 231px;
+  height: 69px;
+  font-family: $op-font;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 63px;
+  text-align: center;
+  text-decoration: none;
+  margin:65px 0 160px;
+  &:hover {
+    box-shadow: 5px 5px 10px 0 #ffffff;
+  }
+}
+.slick-next, .slick-prev {
+  z-index: 2;
+  width: 51px;
+  height: 51px;
+
+}
+.slick-next:before, .slick-prev:before {
+  display: inline-block;
+  content: '';
+  border-radius: 50%;
+  background-color: #fefefe;
+  width: 51px;
+  height: 51px;
+}
+.slick-next:before {
+  background-image: url('../img/arrow-right.png');
+  background-position: center;
+  background-repeat:no-repeat;
+}.slick-prev:before {
+  background-image: url('../img/arrow-left.png');
+  background-position: center;
+  background-repeat:no-repeat;
+}
+.slick-next {
+right: 30px;
+
+} .slick-prev {
+left: 30px;
+  }
+/*styles for slider*/
+/* styles for block "team"*/
+.team {
+  font-size: 0;
+  padding-top: 100px;
+}
+.team__person {
+  display: inline-block;
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 25px;
+  &:nth-child(3){
+    & .person__view{
+      background-image: url('../img/add.png');
+      background-position: center;
+      background-repeat:no-repeat;
+    }
+  }
+}
+.team__title {
+  margin:0 auto 70px;
+  font-family: $op-font;
+  color: #4e525d;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+.person__view {
+  border-radius: 50%;
+  background-color: #eeeef0;
+  width: 201px;
+  height: 201px;
+  margin: 70px auto;
+
+}
+.person__name {
+  display: block;
+  font-family: $op-font;
+  color:  #4e525d;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+.person__position {
+  display: block;
+  font-family: $op-font;
+  color:  #4e525d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+.person__description {
+  display: block;
+  font-family: $op-font;
+  color: #4e525d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin:30px auto 50px;
+}
+/* styles for block "team"*/
+/* styles for block "offers"*/
+.offers {
+  font-size: 0;
+}
+.offers__plan {
+  display: inline-block;
+}
+/* styles for block "offers"*/

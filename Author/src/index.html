@@ -7,39 +7,44 @@
 </head>
 <body>
 <header class="header">
-    <div class="header__logo">
-        <a class="logo__link">
-            <img src="img/logo.png" alt="logo" class="logo__img">
-        </a>
+    <div class="container">
+        <div class="header__logo">
+            <a href="#" class="logo__link">
+                <img src="img/logo.png" alt="logo" class="logo__img">
+            </a>
+        </div>
+        <div class="wrapper-menu">
+            <div class="header__menu-compact"></div>
+            <ul class="header__menu">
+                <li class="menu__item">
+                    <a href="#" class="item__link fly">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="item__link fly">Services</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="item__link fly">Portfolio</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="item__link fly">Team</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="item__link fly">Blog</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="item__link fly">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <ul class="header__menu">
-        <li class="menu item">
-            <a href="#" class="item__link fly">Home</a>
-        </li>
-        <li class="menu item">
-            <a href="#" class="item__link fly">Services</a>
-        </li>
-        <li class="menu item">
-            <a href="#" class="item__link fly">Portfolio</a>
-        </li>
-        <li class="menu item">
-            <a href="#" class="item__link fly">Team</a>
-        </li>
-        <li class="menu item">
-            <a href="#" class="item__link fly">Blog</a>
-        </li>
-        <li class="menu item">
-            <a href="#" class="item__link fly">Contact</a>
-        </li>
-    </ul>
 </header>
-<main class="main">
+<main class="main container">
     <div class="slider">
         <div class="slider__content">
             <p class="content__title">This is a main heading</p>
             <span class="content__txt">Lorem Ipsum is simply dummy text of the printing
 </span>
-            <a href="" class="content__more">Learn More</a>
+            <a href="#" class="content__more">Learn More</a>
         </div>
         <div class="slider__content">
             <p class="content__title">This is a main heading</p>
@@ -51,37 +56,39 @@
             <p class="content__title">This is a main heading</p>
             <span class="content__txt">Lorem Ipsum is simply dummy text of the printing
 </span>
-            <a href="" class="content__more">Learn More</a>
+            <a href="#" class="content__more">Learn More</a>
         </div>
     </div>
-    <div class="team">
+    <div class="team container">
+        <p class="team__title">The team</p>
         <div class="team__person">
             <div class="person__view"></div>
-            <span class="person__name"></span
-            ><span class="person__position"></span>
-            <span class="person__description"></span>
+            <span class="person__name">Adrian Thomas</span>
+            <span class="person__position">CEO & Founder</span>
+            <span class="person__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span>
         </div>
         <div class="team__person">
             <div class="person__view"></div>
-            <span class="person__name"></span>
-            <span class="person__position"></span>
-            <span class="person__description"></span>
+            <span class="person__name">Narate Ketram</span>
+            <span class="person__position">Creative Director</span>
+            <span class="person__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span>
         </div>
         <div class="team__person">
             <div class="person__view"></div>
-            <span class="person__name"></span
-            ><span class="person__position"></span>
-            <span class="person__description"></span>
+            <span class="person__name">Fernando Comet</span
+            ><span class="person__position">CEO & Founder</span>
+            <span class="person__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span>
         </div>
         <div class="team__person">
             <div class="person__view"></div>
-            <span class="person__name"></span>
-            <span class="person__position"></span>
-            <span class="person__description"></span></div>
+            <span class="person__name">Adedayo saheed</span>
+            <span class="person__position">Creative Director</span>
+            <span class="person__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span>
+        </div>
     </div>
-    <div class="offers">
+    <div class="offers container">
         <div class="offers__plan">
-            <p class="plan__title"></p>
+            <p class="plan__title">Basic</p>
             <span class="plan__price"></span>
             <ul class="plan__options">
                 <li class="option"></li>
@@ -96,7 +103,7 @@
             </div>
         </div>
         <div class="offers__plan">
-            <p class="plan__title"></p>
+            <p class="plan__title">Pro</p>
             <span class="plan__price"></span>
             <ul class="plan__options">
                 <li class="option"></li>
@@ -111,7 +118,7 @@
             </div>
         </div>
         <div class="offers__plan">
-            <p class="plan__title"></p>
+            <p class="plan__title">Premium</p>
             <span class="plan__price"></span>
             <ul class="plan__options">
                 <li class="option"></li>
@@ -136,5 +143,8 @@
         </form>
     </div>
 </main>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
