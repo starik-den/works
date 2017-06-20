@@ -6,9 +6,17 @@
             arrows: true,
             // autoplay: true,
             speed: 1500,
-            dots: false
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
         });
-        $('.fly').click(function(){
+        $('.fly').click(function () {
             var target = $(this).attr('href');
             $('html, body').animate({scrollTop: $(target).offset().top}, 800);
             return false;
@@ -24,7 +32,7 @@
                 object.removeClass("fixed");
             }
         });
-        $.validator.addMethod("realname", function(value, element) {
+        $.validator.addMethod("realname", function (value, element) {
             return this.optional(element) || /^[а-яё, a-z]+$/i.test(value);
         }, "Ведите свое имя без цифр");
         $('#form').validate({

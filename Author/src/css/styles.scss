@@ -493,3 +493,101 @@ $op-font: 'Open Sans', Arial, sans-serif;
   z-index: 3;
 }
 // styles working with JS
+// responsive menu
+
+// responsive menu
+// responsive style
+@media (max-width: 1024px){
+  .header__logo {
+    margin-left: 60px;
+  }
+  .header__menu {
+    margin-right: 60px;
+  }
+  .team, .offers, .contact {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .team__title {
+    margin-bottom: 0;
+  }
+  .info {
+    width: 40%;
+    padding-right: 5%;
+  }
+  .form {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .team__person {
+    width: 50%;
+  }
+  .person__view {
+    margin-top: 20px;
+  }
+  .team__title {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .header__menu {
+    display: none;
+  }
+  .content__title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-top: 60px;
+  }
+  .team__person {
+    width: 100%;
+  }
+  .team {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .offers {
+    padding:65px 40px;
+  }
+  .offers__plan {
+    width: 100%;
+    &:nth-child(2){
+      margin: 10px 0;
+    }
+  }
+  .info {
+    width: 100%;
+    margin: 0;
+  }
+  .form {
+    width: 100%;
+  }
+  .info__social {
+    text-align: center;
+  }
+  .form__name, .form__email {
+    width: 100%;
+    margin: 25px 0 0;
+  }
+  .contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contact__title {
+    margin-bottom: 50px;
+  }
+  .form__btn {
+    float: none;
+  }
+  .form {
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .team {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
+// responsive style
