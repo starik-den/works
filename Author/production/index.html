@@ -20,19 +20,19 @@
                     <a href="#" class="item__link fly">Home</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="item__link fly">Services</a>
+                    <a href="#offers" class="item__link fly">Services</a>
                 </li>
                 <li class="menu__item">
                     <a href="#" class="item__link fly">Portfolio</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="item__link fly">Team</a>
+                    <a href="#team" class="item__link fly">Team</a>
                 </li>
                 <li class="menu__item">
                     <a href="#" class="item__link fly">Blog</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="item__link fly">Contact</a>
+                    <a href="#contact" class="item__link fly">Contact</a>
                 </li>
             </ul>
         </div>
@@ -59,7 +59,7 @@
             <a href="#" class="content__more">Learn More</a>
         </div>
     </div>
-    <div class="team container">
+    <div id="team" class="team container">
         <p class="team__title">The team</p>
         <div class="team__person">
             <div class="person__view"></div>
@@ -86,7 +86,7 @@
             <span class="person__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span>
         </div>
     </div>
-    <div class="offers container">
+    <div id="offers" class="offers container">
         <div class="offers__plan">
             <p class="plan__title">Basic</p>
             <span class="plan__price">$5.01/ Month</span>
@@ -133,7 +133,7 @@
             </div>
         </div>
     </div>
-    <div class="contact container">
+    <div id="contact" class="contact container">
         <p class="contact__title">Contact Us</p>
         <div class="info">
             <p class="info__title">Get in touch with us</p>
@@ -149,26 +149,27 @@
                     <a href="#">&#xf235;</a>
                 </div>
             </div>
-            <span class="info__copyright">Posted by Dospel & GanjaParker</span>
-            <span class="info__copyright">+XX-XXXX - XXXX - XX</span>
+            <span class="info__copyright">Posted by Dospel & GanjaParker</span><br>
+            <span class="info__copyright">+XX-XXXX - XXXX - XX</span><br>
             <span class="info__copyright">info@mail.com</span>
         </div>
-        <form action="" class="form">
-            <label>
-                <input class="form__name" type="text" maxlength="255" placeholder="Name">
-            </label>
-            <label>
-                <input class="form__email" type="email" maxlength="255" placeholder="Email">
-            </label>
-            <label>
-                <textarea class="form__massage" maxlength="600" placeholder="Massage"></textarea>
-            </label>
+        <form id="form" action="" class="form">
+            <label for="name"></label>
+                <input id="name" class="form__name" type="text" maxlength="255" name="name" placeholder="Name">
+
+            <label for="email"></label>
+                <input id="email" class="form__email" type="email" maxlength="255" name="email" placeholder="Email">
+
+            <label for="massage"></label>
+                <textarea name="massage" id="massage" class="form__massage" maxlength="600" placeholder="Massage"></textarea>
+
             <button type="submit" class="form__btn">Send</button>
         </form>
     </div>
 </main>
 <script src="js/jquery-3.2.0.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

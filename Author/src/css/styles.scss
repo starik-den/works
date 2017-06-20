@@ -330,7 +330,7 @@ $op-font: 'Open Sans', Arial, sans-serif;
 .contact {
   background: #181818 url("../img/contact-us-bg.png") no-repeat;
   background-size: cover;
-  padding: 100px 130px 0;
+  padding: 100px 130px 100px;
   box-sizing: border-box;
   font-size: 0;
 }
@@ -355,6 +355,12 @@ $op-font: 'Open Sans', Arial, sans-serif;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.info {
+  padding-right: 10%;
+  vertical-align: top;
 }
 .info__txt {
   font-family: $op-font;
@@ -367,6 +373,8 @@ $op-font: 'Open Sans', Arial, sans-serif;
 .info__social {
   font-family: Ionicons;
   font-size: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .social__fb, .social__tw, .social__gplus {
   display: inline-block;
@@ -394,6 +402,7 @@ $op-font: 'Open Sans', Arial, sans-serif;
 }
 .social__tw {
   background-color: #3ec2f3;
+  margin: 0 15px;
 }
 .social__gplus {
   background-color: #e44c41;
@@ -408,6 +417,23 @@ $op-font: 'Open Sans', Arial, sans-serif;
 }
 .form {
   font-size: 0;
+  position: relative;
+}
+#form label {
+  font-family: $op-font;
+  color: #c1c1c1;
+  font-size: 16px; /* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+}
+#name-error {
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+#email-error {
+  position: absolute;
+  top: -25px;
+  right: 0;
 }
 .form__name, .form__email, .form__massage {
   padding-left: 15px;
@@ -437,5 +463,33 @@ $op-font: 'Open Sans', Arial, sans-serif;
   width: 100%;
   resize: none;
   min-height: 180px;
+  padding-top: 8px;
+}
+.form__btn {
+  border-radius: 3px;
+  background-color: #49cbcd;
+  width: 170px;
+  height: 50px;
+  font-family: $op-font;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  border: none;
+  outline: none;
+  float: right;
+  margin-top: 30px;
 }
 // styles for block "contact"
+// styles working with JS
+.plan__title.active {
+  background-color: #49cbcd;
+}
+.header.fixed {
+  //display: none;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+// styles working with JS
