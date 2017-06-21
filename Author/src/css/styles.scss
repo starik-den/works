@@ -33,6 +33,7 @@ $op-font: 'Open Sans', Arial, sans-serif;
 .wrapper-menu {
   float: right;
   height: 100%;
+  position: relative;
 }
 
 .header__menu {
@@ -56,7 +57,7 @@ $op-font: 'Open Sans', Arial, sans-serif;
     color: #484c55;
     font-size: 15px;
     font-weight: 400;
-    line-height: 87px;
+    line-height: 100px;
     text-align: center;
     text-decoration: none;
   }
@@ -422,7 +423,7 @@ $op-font: 'Open Sans', Arial, sans-serif;
 #form label {
   font-family: $op-font;
   color: #c1c1c1;
-  font-size: 16px; /* Приближение из-за подстановки шрифтов */
+  font-size: 16px;
   font-weight: 400;
 }
 #name-error {
@@ -442,9 +443,9 @@ $op-font: 'Open Sans', Arial, sans-serif;
   background-color: #ffffff;
   font-family: $op-font;
   color: #c1c1c1;
-  font-size: 16px; /* Приближение из-за подстановки шрифтов */
+  font-size: 16px;
   font-weight: 400;
-  line-height: 24px; /* Приближение из-за подстановки шрифтов */
+  line-height: 24px;
   text-align: left;
   border: none;
   outline: none;
@@ -480,6 +481,9 @@ $op-font: 'Open Sans', Arial, sans-serif;
   outline: none;
   float: right;
   margin-top: 30px;
+  &:hover {
+    box-shadow: 5px 5px 10px 0 #ffffff;
+  }
 }
 // styles for block "contact"
 // styles working with JS
@@ -491,11 +495,34 @@ $op-font: 'Open Sans', Arial, sans-serif;
   position: fixed;
   top: 0;
   z-index: 3;
+  background: rgba(255, 255, 255, 0.9);
 }
 // styles working with JS
-// responsive menu
 
 // responsive menu
+.header__menu-compact {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 3px solid #49cbcd;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 5px;
+  padding-top: 3px;
+  margin-top: 30px;
+  margin-right: 30px;
+  span {
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background: #49cbcd;
+  }
+}
+
+// responsive menu
+
 // responsive style
 @media (max-width: 1024px){
   .header__logo {
@@ -520,6 +547,12 @@ $op-font: 'Open Sans', Arial, sans-serif;
   }
 }
 @media (max-width: 768px) {
+  .header__logo {
+    margin-left: 30px;
+  }
+  .header__menu {
+    margin-right: 30px;
+  }
   .team__person {
     width: 50%;
   }
@@ -529,11 +562,64 @@ $op-font: 'Open Sans', Arial, sans-serif;
   .team__title {
     margin-bottom: 40px;
   }
+  #form label {
+    font-size: 12px;
+  }
 }
-@media (max-width: 425px) {
+@media (max-width: 700px){
   .header__menu {
     display: none;
+    position: absolute;
+    z-index: 4;
+    background: #f8f9fb;
+    height:auto;
+    width: 200px;
+    top: 100px;
+    left: -130px;
+    border-bottom:2px solid #ecf0f1 ;
+    .menu__item {
+      display: block;
+      width: 100%;
+      height: 40px;
+      border-top: 2px solid #ecf0f1;
+
+    }
+    .item__link {
+      line-height:38px;
+      font-size: 20px;
+    }
   }
+  .header__menu-compact {
+    display: block;
+  }
+  .content__title {
+    line-height: 1;
+  }
+}
+@media (max-width: 640px) {
+  .form {
+    margin-top: 0;
+  }
+  .form__name {
+    width: 100%;
+    margin: 0;
+  }
+  .form__email {
+    width: 100%;
+    margin: 25px 0 0;
+  }
+  #name-error {
+    position: absolute;
+    top: -20px;
+    left: 0;
+  }
+  #email-error {
+    position: absolute;
+    top: 48px;
+    left: 0;
+  }
+}
+@media (max-width: 425px) {
   .content__title {
     font-size: 50px;
     line-height: 60px;
@@ -569,6 +655,17 @@ $op-font: 'Open Sans', Arial, sans-serif;
     width: 100%;
     margin: 25px 0 0;
   }
+  #name-error {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+  }
+  #email-error {
+    position: absolute;
+    top: 74px;
+    left: 0;
+  }
   .contact {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -590,4 +687,14 @@ $op-font: 'Open Sans', Arial, sans-serif;
   }
 
 }
+@media (max-width: 320px) {
+  .content__title {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+  .content__more {
+    margin: 60px 0;
+  }
+}
 // responsive style
+
