@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     imagemin = require ('gulp-imagemin'),
     pngquant = require ('imagemin-pngquant'),
-    // postscss = require('gulp-postcss'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
 watch = require ('gulp-watch');
@@ -36,8 +35,8 @@ var path = {
 };
 gulp.task('html:prod', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({stream: true}));
 });
 gulp.task('style:prod', function () {
     gulp.src(path.src.style)
@@ -51,19 +50,19 @@ gulp.task('style:prod', function () {
 });
 gulp.task('js:prod', function () {
     gulp.src(path.src.js) //Найдем наш main файл
-        .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
 });
 gulp.task('image:prod', function () {
-    gulp.src(path.src.img) //Выберем наши картинки
+    gulp.src(path.src.img) //Выберем картинки
         .pipe(imagemin())
-        // .pipe(imagemin({ //Сожмем их
+        // .pipe(imagemin({
         //     progressive: true,
         //     svgoPlugins: [{removeViewBox: false}],
         //     use: [pngquant()],
         //     interlaced: true
         // }))
-        .pipe(gulp.dest(path.build.img)) //И бросим в build
+        .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
 gulp.task('browserSync', function () {
@@ -105,27 +104,3 @@ gulp.task('default', ['build', 'browserSync', 'watch']);
 
 
 /*------------------------------------------------------*/
-/*gulp.task('sassCss', function () {
- gulp.src('./styles.scss')
- .pipe(sass())
- .pipe(min())
- .pipe(autopref())
- .pipe(gulp.dest('./'))
- });
-
-
- gulp.task('jsOptimize', function () {
- gulp.src(['./js/jquery-3.2.0.min.js', './js/slick.min.js', './js/main.js'])
- .pipe(concat('main2.js'))
- .pipe(uglify())
- .pipe(rename({
- // basename: 'main',
- prefix: 'ba-',
- suffix: '.min'
- }))
- .pipe(gulp.dest('./js'))
- });
- gulp.task('default', ['sassCss', 'jsOptimize']);
- gulp.task('watch', function () {
- gulp.watch(['./styles.scss', './js/*.js'], ['sassCss', 'jsOptimize']);
- });*/
